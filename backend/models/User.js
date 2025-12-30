@@ -1,0 +1,16 @@
+import mongoose from "mongoose";
+
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: { type: String, unique: true },
+  password: String,
+  mobile: String,
+  role: {
+    type: String,
+    enum: ["Tourist", "Local Guide", "Host"] // 🚫 Admin REMOVED
+  },
+  profileImage: String,
+  approved: { type: Boolean, default: false }
+}, { timestamps: true });
+
+export default mongoose.model("User", userSchema);

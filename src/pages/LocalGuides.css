@@ -1,0 +1,306 @@
+/* src/pages/LocalGuides.css */
+.local-guides-page {
+  min-height: 100vh;
+  padding: 2rem 2.5rem 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111827;
+}
+
+.back-btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.back-btn:hover {
+  background: #eef2ff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.32);
+}
+
+.page-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #f9fafb;
+  text-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
+}
+
+.page-subtitle {
+  color: #e5e7eb;
+  margin-top: 0.4rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.no-guides-text {
+  color: #f9fafb;
+  margin-top: 1rem;
+}
+
+.page-loading,
+.page-error {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #f9fafb;
+  font-size: 1.1rem;
+}
+
+/* Guides grid */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.guide-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.4rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.35);
+  border-color: #4f46e5;
+}
+
+.guide-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eef2ff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+}
+
+.guide-info h3 {
+  margin-bottom: 0.1rem;
+  font-size: 1.2rem;
+  color: #111827;
+}
+
+.guide-role {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0.2rem;
+}
+
+.guide-location,
+.guide-languages,
+.guide-price,
+.guide-rating {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-top: 0.1rem;
+}
+
+/* Hire modal */
+.guide-hire-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.guide-hire-modal {
+  background: #f9fafb;
+  border-radius: 22px;
+  padding: 2.2rem 2rem 2rem;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.5);
+  text-align: left;
+}
+
+.guide-hire-modal h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #111827;
+}
+
+.guide-modal-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e5e7eb;
+  margin-bottom: 1rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.3);
+}
+
+.guide-hire-modal p {
+  margin-bottom: 0.4rem;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.message-label {
+  margin-top: 1.2rem;
+  display: block;
+  font-weight: 600;
+  color: #111827;
+}
+
+.guide-message-box {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1.8px solid #e5e7eb;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.96rem;
+  min-height: 110px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guide-message-box:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.guide-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.confirm-btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #f9fafb;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.confirm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.6);
+}
+
+.cancel-btn {
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background: #d1d5db;
+}
+
+/* Success modal */
+.success-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2100;
+}
+
+.success-modal {
+  background: #f9fafb;
+  border-radius: 22px;
+  padding: 2.3rem 2rem 2.1rem;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.5);
+}
+
+.success-confetti {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.success-modal h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.8rem;
+  color: #111827;
+}
+
+.success-modal p {
+  font-size: 0.96rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-btn {
+  padding: 0.85rem 1.9rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #f9fafb;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(16, 185, 129, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(16, 185, 129, 0.65);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .local-guides-page {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .guide-hire-modal,
+  .success-modal {
+    padding: 1.8rem 1.4rem 1.7rem;
+  }
+
+  .guide-modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .confirm-btn,
+  .cancel-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

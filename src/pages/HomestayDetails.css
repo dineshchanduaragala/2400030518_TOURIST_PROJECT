@@ -1,0 +1,218 @@
+/* src/pages/HomestayDetails.css */
+.details-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #f9fafb;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(15, 23, 42, 0.8);
+  color: #e5e7eb;
+  border: 2px solid rgba(148, 163, 184, 0.4);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.back-btn:hover {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.details-img {
+  width: 100%;
+  max-width: 1000px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.8);
+  margin-bottom: 2rem;
+}
+
+.details-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.details-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.details-location {
+  font-size: 1.3rem;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.details-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #10b981;
+  margin-bottom: 2rem;
+}
+
+.details-description {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  border-left: 4px solid #4f46e5;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #e5e7eb;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #f9fafb;
+}
+
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.amenities-list li {
+  background: rgba(15, 23, 42, 0.7);
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.amenities-list li:hover {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: #4f46e5;
+  transform: translateX(4px);
+}
+
+.upi-section {
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid rgba(16, 185, 129, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.upi-info {
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.upi-qr-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+  margin: 1rem auto;
+  display: block;
+}
+
+.upi-note {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.book-btn {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #f9fafb;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.5);
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 60px rgba(16, 185, 129, 0.7);
+}
+
+.page-loading,
+.page-error {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #d1d5db;
+}
+
+.page-error {
+  color: #f87171;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .details-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .details-img {
+    height: 280px;
+    border-radius: 20px;
+  }
+  
+  .details-title {
+    font-size: 2.2rem;
+  }
+  
+  .details-price {
+    font-size: 1.8rem;
+  }
+  
+  .amenities-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .upi-qr-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-content {
+    padding: 0 1rem;
+  }
+  
+  .upi-section {
+    padding: 1.5rem;
+  }
+}
